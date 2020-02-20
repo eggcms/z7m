@@ -12,7 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('page.home');
+});
+
+Route::get('/live', function () {
+    return view('page.live');
+});
+
+Route::get('/news', function () {
+    return view('page.news');
+});
+
+Route::get('/vicrow', function () {
+    return view('page.vicrow');
+});
+
+Route::get('/tded', function () {
+    return view('page.tded');
+});
+
+Route::get('/tdedstep', function () {
+    return view('page.tdedstep');
 });
 
 Route::resource('/api/{cid}/','ApiController');
