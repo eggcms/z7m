@@ -114,7 +114,10 @@ body {
   height: 35px;
   padding: 0px 2px;
   text-align: center;
-  margin: 5px 0px; }
+  margin: 5px 0px;
+  transition: all .2s ease-in-out; }
+  #news .vicrow p:hover {
+    color: #ee8f21; }
 #news .vicrow .title p {
   color: #ee8f21;
   text-align: right;
@@ -322,6 +325,8 @@ footer .footer-copyright {
   .back-to-top i {
     color: #fff; }
 
+/* ===================== form - Login ===================== */
+/* ===================== form - Login ===================== */
 /* ===================== Responsive ===================== */
 @media (max-width: 576px) {
   #header {
@@ -361,7 +366,8 @@ footer .footer-copyright {
       border-top-color: transparent;
       border-right-color: transparent; }
   #title .title p {
-    font-size: 16px; }
+    font-size: 16px;
+    margin: 0; }
 
   .title .title-tded h3 {
     display: block; }
