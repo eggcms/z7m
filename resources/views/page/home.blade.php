@@ -112,139 +112,6 @@
     </div>
 </div>
 
-<div id="news">
-    <div class="container bg-con">
-        <div class="row">
-            <div class="col-12 mt-2">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div id="title">
-                            <div class="row">
-                                <div class="col-12 my-2">
-                                    <div class="title">
-                                        <div class="row">
-                                            <div class="col-8"><h3>ข่าวฟุตบอลวันนี้</h3></div>
-                                            <div class="col-4">
-                                                <a href="#"><p>ดูทั้งหมด</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img src="/images/news1.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news1.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news2.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news3.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div id="title">
-                            <div class="row">
-                                <div class="col-12 my-2">
-                                    <div class="title">
-                                        <div class="row">
-                                            <div class="col-8"><h3>วิเคราะห์บอลวันนี้</h3></div>
-                                            <div class="col-4">
-                                                <a href="#"><p class="">ดูทั้งหมด</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row vicrow">
-                            <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="title">
     <div class="container pt-4 bg-con">
         <div class="row">
@@ -389,6 +256,140 @@
                         <div class="tded-step py-2">
                             <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="news">
+    <div class="container bg-con">
+        <div class="row">
+            <div class="col-12 mt-2">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div id="title">
+                            <div class="row">
+                                <div class="col-12 my-2">
+                                    <div class="title">
+                                        <div class="row">
+                                            <div class="col-8"><h3>วิเคราะห์บอลวันนี้</h3></div>
+                                            <div class="col-4">
+                                                <a href="#"><p class="">ดูทั้งหมด</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row vicrow">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <img class="rounded" src="/images/news3.jpg" alt="">
+                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div id="title">
+                            <div class="row">
+                                <div class="col-12 my-2">
+                                    <div class="title">
+                                        <div class="row">
+                                            <div class="col-8"><h3>ข่าวฟุตบอลวันนี้</h3></div>
+                                            <div class="col-4">
+                                                <a href="#"><p>ดูทั้งหมด</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="slid-news">
+                                        <a href="#">
+                                            <img src="/images/news1.jpg" class="d-block w-100" alt="...">
+                                            <div class="content">
+                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="slid-news">
+                                        <a href="#">
+                                            <img class="rounded" src="/images/news1.jpg" class="d-block w-100" alt="...">
+                                            <div class="content">
+                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="slid-news">
+                                        <a href="#">
+                                            <img class="rounded" src="/images/news2.jpg" class="d-block w-100" alt="...">
+                                            <div class="content">
+                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="slid-news">
+                                        <a href="#">
+                                            <img class="rounded" src="/images/news3.jpg" class="d-block w-100" alt="...">
+                                            <div class="content">
+                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                     </div>
                 </div>
             </div>
