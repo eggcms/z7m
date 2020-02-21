@@ -178,6 +178,12 @@ footer {
     i { color:#fff; }
 }
 
+/* ===================== form - Login ===================== */
+
+
+
+/* ===================== form - Login ===================== */
+
 
 /* ===================== Responsive ===================== */
 @media (max-width: 576px) {
@@ -204,7 +210,7 @@ footer {
                 &::before { border: 15px solid #ee8f21;
                     border-top-color: transparent; border-right-color:transparent ;}
             }
-           p { font-size: 16px; }
+           p { font-size: 16px; margin: 0; }
         }
     }
 
