@@ -1,5 +1,19 @@
 @extends('layouts.main')
+@section('title')
+ @if($meta_title)
+    {{ $meta_title }}
+@else
+    ทีเด็ดคลับดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง
+@endif
+@endsection
 
+@section('description')
+@if($meta_description)
+    {{ $meta_description }}
+@else
+    ทีเด็ดคลับดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป ข้อมูลบอลจากลีกดังทั่วโลก โดยมุ่งเน้นข้อมูลที่ถูกต้อง ฉับไวเที่ยงตรง โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง
+@endif 
+@endsection
 @section('content')
 
 <div id="title">
@@ -39,7 +53,7 @@
                                 </div>
                                 <div class="panel-body" >
                                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                                        <form name="line-notify" class="form-horizontal" role="form" action="{{url('/api/line')}}" method="post">
+                                        <form name="line-notify" class="form-horizontal" role="form" action="{{url('/line-notify')}}" method="post">
                                         <div class="input-group" style="margin-bottom: 5px">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
@@ -69,6 +83,7 @@
                                                 <button class="btn text-white" style="font-size:17px; background-color:#00c200; width:100%;" name="submit" type="submit">ยืนยันข้อมูลการสมัคร</button>
                                             </div>
                                         </div>
+                                        @csrf
                                     </form>
                                 </div>
                             </div>
@@ -85,16 +100,14 @@
         <div class="row">
             <div class="col">
                 <div class="row">
+
+                    @foreach($youtube as $y)
                     <div class="col-12 col-lg-6 py-2 py-lg-0">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="1903" height="768" src="https://www.youtube.com/embed/Pu3pyYwCjvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="1903" height="768" src="{{ $y->clip }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 py-2 py-lg-0">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="1903" height="768" src="https://www.youtube.com/embed/Pu3pyYwCjvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -106,7 +119,7 @@
     <div class="container bg-con">
         <div class="row">
             <div class="col-12 py-2">
-                <img src="/images/bn-1.gif" alt="">
+                <a href="https://www.mm88zean.com" target="_blank"><img src="/images/bn-1.gif" alt=""></a>
             </div>
         </div>
     </div>
@@ -129,134 +142,38 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
+                    @foreach($tsteps as $ts)
                     <div class="col-12 col-md-3 mt-3">
                         <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
+                            <div class="img-tded">
+                                <a href="#" target="_blank">
+                                    <img src="{{url('/images/balltor12.gif')}}" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tded-step py-2 border-bottom">
+                            @if($ts['team1'] != '')
+                                <p><span style="color:{{$ts['team1w']}}">{{$ts['team1']}}</span><img class="img-1" src="/images/ball.gif" alt=""></p>
+                            @else
+                                <p class="text-center">กำลังอัพเดทข้อมูล...</p>
+                            @endif
+                        </div>
+                        <div class="tded-step py-2 border-bottom" style="background:#eee;">
+                            @if($ts['team2'] != '')
+                                <p><span style="color:{{$ts['team2w']}}">{{$ts['team2']}}</span><img class="img-1" src="/images/ball.gif" alt=""></p>
+                            @else
+                                <p class="text-center">กำลังอัพเดทข้อมูล...</p>
+                            @endif   
                         </div>
                         <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
+                            @if($ts['team3'] != '')
+                                <p><span style="color:{{$ts['team3w']}}">{{$ts['team3']}}</span><img class="img-1" src="/images/ball.gif" alt=""></p>
+                            @else
+                                <p class="text-center">กำลังอัพเดทข้อมูล...</p>
+                            @endif
                         </div>
                     </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3 mt-3">
-                        <div class="img-tded">
-                            <a href="#">
-                                <img src="/images/balltor12.gif" alt="">
-                            </a>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="bg-grey py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                        <div class="tded-step py-2">
-                            <p>แมนฯ ยูไนเต็ด ต่อ 0.0.5<img src="/images/ball.gif" alt=""></p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -277,7 +194,7 @@
                                         <div class="row">
                                             <div class="col-8"><h3>วิเคราะห์บอลวันนี้</h3></div>
                                             <div class="col-4">
-                                                <a href="#"><p class="">ดูทั้งหมด</p></a>
+                                                <a href="{{url('allanalyze')}}"><p class="">ดูทั้งหมด</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -285,13 +202,16 @@
                             </div>
                         </div>
                         <div class="row vicrow">
+
+                            @foreach($analyzes as $an)
                             <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
+                                <a href="{{url('analyze/'.$an->id)}}">
+                                    <img class="rounded" src="{{ serv_url('imgs/'.$an->image) }}" alt="{{ $an->title }}">
+                                    <p>{{ $an->title }}</p>
                                 </a>
                             </div>
-                            <div class="col-sm-6 col-md-4 mb-4">
+                            @endforeach
+                            {{--  <div class="col-sm-6 col-md-4 mb-4">
                                 <a href="#">
                                     <img class="rounded" src="/images/news3.jpg" alt="">
                                     <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
@@ -320,7 +240,8 @@
                                     <img class="rounded" src="/images/news3.jpg" alt="">
                                     <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
                                 </a>
-                            </div>
+                            </div>  --}}
+
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -331,7 +252,7 @@
                                         <div class="row">
                                             <div class="col-8"><h3>ข่าวฟุตบอลวันนี้</h3></div>
                                             <div class="col-4">
-                                                <a href="#"><p>ดูทั้งหมด</p></a>
+                                                <a href="{{url('allnews')}}"><p>ดูทั้งหมด</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -340,17 +261,20 @@
                         </div>
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
+                                @foreach($news as $new)
+                                    @if ($loop->first) <div class="carousel-item active"> 
+                                    @else <div class="carousel-item"> @endif
                                     <div class="slid-news">
-                                        <a href="#">
-                                            <img src="/images/news1.jpg" class="d-block w-100" alt="...">
+                                        <a href="{{url('news/'.$new->id)}}">
+                                            <img src="{{serv_url('/imgs/'.$new->image)}}" class="d-block w-100" alt="...">
                                             <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
+                                                <p>{{$new->title}}</p>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                @endforeach
+                                {{--  <div class="carousel-item">
                                     <div class="slid-news">
                                         <a href="#">
                                             <img class="rounded" src="/images/news1.jpg" class="d-block w-100" alt="...">
@@ -379,7 +303,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                </div>
+                                </div>  --}}
                             </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -425,7 +349,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="api py-3">
-                    <img style="width:100%; height:auto; " src="/images/api1.png" alt="">
+                    {{ballstep($objs)}}
+                    {{--  <img style="width:100%; height:auto; " src="/images/api1.png" alt="">  --}}
                 </div>
             </div>
         </div>

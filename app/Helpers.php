@@ -117,7 +117,7 @@ function ball_table() {
    if (count($data->programs)) {
       // Open the table
       echo "<div class='tableLive'>";
-      echo "<table class='table-doball table'>";
+      echo "<table class='table-doball table text-light'>";
       echo "<thead>";
       echo "<tr>";
       echo "<th class='mobileOpen'>ทีมเหย้า</th>";
@@ -129,7 +129,7 @@ function ball_table() {
       echo "<th class='mobileNone'>ทีมเหย้า</th>";
       echo "<th class='mobileNone'></th>";
       echo "<th class='mobileNone'>ทีมเยือน</th>";
-      echo "<th class='mobileNone'>ช่องอื่นๆ</th>";
+      echo "<th class='mobileNone' width='20%'>ช่องอื่นๆ</th>";
       echo "<th>ดูบอล</th>";
       echo "</tr>";
       echo "</thead>";
@@ -189,10 +189,9 @@ function ball_table() {
 
 
 function ballstep($obj) {
-   echo '<h3 style="font-size:20px; margin: 10px 0 5px 0;">ราคาบอลสเต็ป ทรรศนะบอลสเต็ป, ฟันธงบอลสเต็ป</h3>
-   <div id="review-socre">
+   echo '<div id="review-socre">
       <div class="head-tded">
-         <h3><span style="font-size:18px; color: #909090;">ประจำวันที่</span> '.thaiDate(date('d-m-Y'),'off').'</h3>
+         <h3 style="color: #FF0;"><span style="font-size:18px;">ประจำวันที่</span> '.thaiDate(date('d-m-Y'),'off').'</h3>
       </div>
    </div>';
  

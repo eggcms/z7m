@@ -3,15 +3,15 @@
         <div class="container text-center text-md-left">
             <div class="row">
                 <div class="col-12 col-md-4 col-lg-2 LOGO">
-                    <a href="#"><img src="/images/zean7m-logo.png" alt=""></a>
+                    <a href="https://www.zean7m.com"><img src="/images/zean7m-logo.png" alt=""></a>
                 </div>
                 <div class="col-12 col-md-8 col-lg-10 content">
-                    <p><a href="#">ZEAN7M.COM</a> เป็นเว็ปไซต์ที่ให้ข้อมูลข่าวสารทางด้านกีฬา อันดับ 1 เว็บไซต์รายงาน ข่าวฟุตบอล  อัพเดททุกวันตลอด 24 ชั่วโมง ตารางบอล ดูบอลสด พร้อมกับ ทีเด็ดบอล เรายังมีบทสรุปวิเคราะห์บอล ให้ ทีเด็ดบอล เป็นคลิปวิดีโอที่ช่องยูทูป ทำให้คุณสะดวกสบาย และมีเวลามากยิ่งขึ้น เพราะเหล่าเซียนบอลของเราได้รวบรวมบทสรุปไว้ให้ท่านทั้งหมดแล้วที่นี่</p>
+                    <p><a href="https://www.zean7m.com">ZEAN7M.COM</a> เป็นเว็ปไซต์ที่ให้ข้อมูลข่าวสารทางด้านกีฬา อันดับ 1 เว็บไซต์รายงาน ข่าวฟุตบอล  อัพเดททุกวันตลอด 24 ชั่วโมง ตารางบอล ดูบอลสด พร้อมกับ ทีเด็ดบอล เรายังมีบทสรุปวิเคราะห์บอล ให้ ทีเด็ดบอล เป็นคลิปวิดีโอที่ช่องยูทูป ทำให้คุณสะดวกสบาย และมีเวลามากยิ่งขึ้น เพราะเหล่าเซียนบอลของเราได้รวบรวมบทสรุปไว้ให้ท่านทั้งหมดแล้วที่นี่</p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright text-center py-2">
-        <span>© 2019 <a href="#">Zean7m</a> All Rights Reserved . Copyright by zean7m.com</span>
+        <span>© 2019 <a href="https://www.zean7m.com">Zean7m</a> All Rights Reserved . Copyright by zean7m.com</span>
             &nbsp;
             <a class="social-icon" href="#" target="_blank">
                 <i class="fab fa-facebook-square" target="_blank" aria-hidden="true"></i>

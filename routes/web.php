@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('page.home');
-});
+Route::get('/', 'FrontController@index');
+Route::get('/allnews', 'FrontController@allnews');
+Route::get('/news/{id}', 'FrontController@news');
+Route::get('/allanalyze', 'FrontController@allvicrow');
+Route::get('/analyze/{id}/', 'FrontController@vicrow');
+Route::post('/line-notify', 'FrontController@lineNotify');
+Route::get('/tdstep', 'FrontController@tdstep');
+Route::get('/tdstep2', 'FrontController@tdstep2');
+
 
 Route::get('/live', function () {
     return view('page.live');

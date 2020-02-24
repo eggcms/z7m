@@ -13,7 +13,7 @@ class ApiController extends Controller
      */
     public function index(Request $request,$cid)
     {
-return response()->json(Blog::all())->withCallback($request->input('callback'));
+        return response()->json(Blog::all())->withCallback($request->input('callback'));
     //    return $request->get('xid').'/'.$cid;
     }
 

@@ -18,16 +18,16 @@
                                 <a class="nav-link" href="{{url('/live')}}">ดูบอลสด</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/news')}}">ข่าวฟุตบอล</a>
+                                <a class="nav-link" href="{{url('/allnews')}}">ข่าวฟุตบอล</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/vicrow')}}">วิเคราะห์บอล</a>
+                                <a class="nav-link" href="{{url('/allanalyze')}}">วิเคราะห์บอล</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/tded')}}">ทีเด็ดบอลเดี่ยว</a>
+                                <a class="nav-link" href="{{url('/tdstep')}}">ทีเด็ดบอลเดี่ยว</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('/tdedstep')}}">ทีเด็ดสเต็ป</a>
+                                <a class="nav-link" href="{{url('/tdstep2')}}">ทีเด็ดสเต็ป</a>
                             </li>
                             <div class="social">
                                 <a class="social-icon" href="https://www.facebook.com/tdedclub88/?modal=admin_todo_tour">

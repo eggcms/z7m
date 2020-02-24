@@ -29,6 +29,7 @@ body { font-family: 'Kanit', sans-serif!important; font-weight: 300; background-
 .live {
     .register {
         h4 { color:#ee8f21; }
+
     }
  }
 
@@ -53,7 +54,10 @@ body { font-family: 'Kanit', sans-serif!important; font-weight: 300; background-
     }
     .vicrow {
         a { text-decoration: none; }
-        img { width: 100%; height: auto; }
+        img { width: 100%; 
+            height:108px;
+        // ***    height: auto; 
+        }
         p { color: #fff; font-size: 12px; overflow: hidden; height: 35px; padding: 0px 2px; text-align: center; margin: 5px 0px;
             transition: all .2s ease-in-out; &:hover{ color: #ee8f21;}
         }
