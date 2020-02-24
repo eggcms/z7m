@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('title')
+
  @if($meta_title)
     {{ $meta_title }}
 @else
@@ -100,7 +101,7 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-
+                @if($youtube)
                     @foreach($youtube as $y)
                     <div class="col-12 col-lg-6 py-2 py-lg-0">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -108,6 +109,7 @@
                         </div>
                     </div>
                     @endforeach
+                @endif
                 </div>
             </div>
         </div>
@@ -142,6 +144,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
+                @if($tsteps)
                     @foreach($tsteps as $ts)
                     <div class="col-12 col-md-3 mt-3">
                         <div class="img-tded">
@@ -153,7 +156,9 @@
                         </div>
                         <div class="tded-step py-2 border-bottom">
                             @if($ts['team1'] != '')
-                                <p><span style="color:{{$ts['team1w']}}">{{$ts['team1']}}</span><img class="img-1" src="/images/ball.gif" alt=""></p>
+                                @if($ts['team1w'])
+                                    <p><span style="color:{{$ts['team1w']}}">{{$ts['team1']}}</span><img class="img-1" src="/images/ball.gif" alt=""></p>
+                                @endif                                
                             @else
                                 <p class="text-center">กำลังอัพเดทข้อมูล...</p>
                             @endif
@@ -174,6 +179,7 @@
                         </div>
                     </div>
                     @endforeach
+                @endif
                 </div>
             </div>
         </div>
@@ -203,44 +209,16 @@
                         </div>
                         <div class="row vicrow">
 
+                        @if($analyzes)
                             @foreach($analyzes as $an)
                             <div class="col-sm-6 col-md-4 mb-4">
                                 <a href="{{url('analyze/'.$an->id)}}">
-                                    <img class="rounded" src="{{ serv_url('imgs/'.$an->image) }}" alt="{{ $an->title }}">
+                                    <img class="rounded" src="http://api-88sport.com/imgs/{{ $an->image }}" alt="{{ $an->title }}">
                                     <p>{{ $an->title }}</p>
                                 </a>
                             </div>
                             @endforeach
-                            {{--  <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4 mb-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <a href="#">
-                                    <img class="rounded" src="/images/news3.jpg" alt="">
-                                    <p>วิเคราะห์บอล กัลโซ่เซเรีย อิตาลี่ วันที่ 20.กพ.2563 ระหว่าง ยูเวนตูส vs โรม่า</p>
-                                </a>
-                            </div>  --}}
+                        @endif
 
                         </div>
                     </div>
@@ -261,6 +239,7 @@
                         </div>
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
+                            @if($news)
                                 @foreach($news as $new)
                                     @if ($loop->first) <div class="carousel-item active"> 
                                     @else <div class="carousel-item"> @endif
@@ -274,36 +253,7 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                {{--  <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news1.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news2.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slid-news">
-                                        <a href="#">
-                                            <img class="rounded" src="/images/news3.jpg" class="d-block w-100" alt="...">
-                                            <div class="content">
-                                                <p>ชีวาสสปอร์ ได้กลับมาเล่นในบ้าน แต่ผลงานช่วงหลังของพวกเขาย่ำแย่หนักฟอร์มไม่ดีนักขณะที่ทีมเยือน อันตัลยาสปอร์ ก็เป็นทีมที่เล่นได้อย่างแข็งแกร่งเกมรับเหนียวแน่น 5 นัดหลังสุดเสียไปแค่ 4 ลูก โดยรวมขอแนะนำรอง ทีมเยือนดีกว่า</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>  --}}
+                            @endif
                             </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -350,7 +300,6 @@
             <div class="col-12">
                 <div class="api py-3">
                     {{ballstep($objs)}}
-                    {{--  <img style="width:100%; height:auto; " src="/images/api1.png" alt="">  --}}
                 </div>
             </div>
         </div>

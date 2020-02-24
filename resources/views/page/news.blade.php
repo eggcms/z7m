@@ -68,9 +68,11 @@
                                     </div>
                                 </div>
                                 <div class="list-news3 pb-3">
+                                @if($news_update)
                                     @foreach($news_update as $nu)
                                         <a href="{{ url('news/'.$nu->id) }}"><p><i class="fas fa-angle-double-right text-danger pt-1"></i> {{ $nu->title }}</p></a>
                                     @endforeach
+                                @endif
                                 </div>
                             </div>
                         </div>

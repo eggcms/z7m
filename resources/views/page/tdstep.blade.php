@@ -47,6 +47,7 @@
         <div class="row">
             <div class="col">
                 <div class="row">
+                @if($youtube)
                     @foreach($youtube as $y)
                     <div class="col-12 col-lg-6 mb-2 ">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -54,6 +55,7 @@
                         </div>
                     </div>
                     @endforeach
+                @endif
                 </div>
             </div>
         </div>

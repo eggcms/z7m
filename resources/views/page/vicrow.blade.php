@@ -68,9 +68,11 @@
                                     </div>
                                 </div>
                                 <div class="list-news3 pb-3">
+                                @if($vicrow_update)
                                     @foreach($vicrow_update as $vu)
                                         <a href="{{ url('analyze/'.$vu->id) }}"><p><i class="fas fa-angle-double-right text-danger pt-1"></i> {{ $vu->title }}</p></a>
                                     @endforeach
+                                @endif
                                 </div>
                             </div>
                         </div>

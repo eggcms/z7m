@@ -3,21 +3,26 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
+use App\Analyze;
 class FrontController extends Controller
 {
     public function index() {
+
 		$news = DB::table('blogs')->orderBy('id','desc')->take(5)->get();
-		$analyzes = DB::table('Analyzes')->orderBy('id','desc')->take(6)->get();
+		//$analyzes = DB::table('analyzes')->orderBy('id','desc')->take(6)->get();
+		$analyzes = Analyze::orderBy('id','desc')->take(6)->get();
+
 		$json = file_get_contents('https://zeanza.com/mm88fa-api/vision_data/api.php?met=hdp&APIkey=S09ZWFArak1BZTNpcUZGNTA2YWVia2tjU0F0bUVyazNZdjJVSGpZWXJMcDlrWHFYRGNnYlRjTWphaFg1RUVVWGh6WjNsUDZ6WUJKeDlCYUFRZzdrenc9PTo6G5mkISD1Nfndtt7QHBsBSA==');
 		$objs = json_decode($json);
 		$youtube = DB::table('youtubes')->orderBy('id','desc')->take(2)->get();
 		$tsteps = DB::table('tsteps')->orderBy('id','asc')->where('updated_at','>',date("Y-m-d 06:00:00"))->take(8)->get();
 
+
 		$max_tstep=$tsteps->count();
         $dataxSet = [];
         if ($max_tstep > 0) {
 			foreach($tsteps as $ttsx) {
-				$av = db::table('users')->where('id',$ttsx->uid)->first();
+				//$av = db::table('users')->where('id',$ttsx->uid)->first();
 				if ($ttsx->team1w == 0) { $ttsx->team1w='black'; }
 				elseif ($ttsx->team1w == 1) { $ttsx->team1w='red'; }
 				elseif ($ttsx->team1w == 2) { $ttsx->team1w='#00CC00'; }
@@ -38,19 +43,16 @@ class FrontController extends Controller
 					"team3w"=> $ttsx->team3w,
 					"created_at"=> $ttsx->created_at,
                     "updated_at"=> $ttsx->updated_at,
-					"avatar"=> $av->avatar,
-					"facebook"=> $av->facebook,
-					"line"=> $av->line
 				];
 			}
 			$mm = (8 - $max_tstep);
 			for($i=1;$i<=$mm;$i++){
-				$dataxSet[] = ["id"=> '',"uid"=> '',"team1"=> '',"team2"=> '',"team3"=> '',"team1w"=> '',"team2w"=> '',"team3w"=> '',"created_at"=> '',"updated_at"=> '',"avatar"=>'no-avatar.jpg',"line"=>'',"facebook"=>''];
+				$dataxSet[] = ["id"=> '',"uid"=> '',"team1"=> '',"team2"=> '',"team3"=> '',"team1w"=> '',"team2w"=> '',"team3w"=> '',"created_at"=> '',"updated_at"=> ''];
 			}
 		}
 		else {			
 			for($i=1;$i<=8;$i++){
-				$dataxSet[] = ["id"=> '',"uid"=> '',"team1"=> '',"team2"=> '',"team3"=> '',"team1w"=> '',"team2w"=> '',"team3w"=> '',"created_at"=> '',"updated_at"=> '',"avatar"=>'no-avatar.jpg',"line"=>'',"facebook"=>''];
+				$dataxSet[] = ["id"=> '',"uid"=> '',"team1"=> '',"team2"=> '',"team3"=> '',"team1w"=> '',"team2w"=> '',"team3w"=> '',"created_at"=> '',"updated_at"=> ''];
 			}			
 		}
 

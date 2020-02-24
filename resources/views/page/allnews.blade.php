@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
-
+                @if($allnews)
                     @foreach($allnews as $news)
                     <div class="col-6 col-lg-3">
                         <div class="list-news2">
@@ -49,6 +49,7 @@
                         </div>
                     </div>
                     @endforeach
+                @endif
                 </div>
             </div>
         </div>
