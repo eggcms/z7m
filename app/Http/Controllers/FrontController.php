@@ -55,8 +55,8 @@ class FrontController extends Controller
 		}
 
         return view('page.home',[
-			'meta_title'=>'ทีเด็ดคลับดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง',
-			'meta_description'=>'ทีเด็ดคลับดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป ข้อมูลบอลจากลีกดังทั่วโลก โดยมุ่งเน้นข้อมูลที่ถูกต้อง ฉับไวเที่ยงตรง โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง',
+			'meta_title'=>'เซียน7เอ็มดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง',
+			'meta_description'=>'เซียน7เอ็มดอทคอม ศูนย์รวมทีเด็ดบอลสเต็ป ข้อมูลบอลจากลีกดังทั่วโลก โดยมุ่งเน้นข้อมูลที่ถูกต้อง ฉับไวเที่ยงตรง โดยบรรดากูรู ระดับเซียนในวงการลูกหนัง',
 			'news'=>$news,
 			'analyzes'=>$analyzes,
 			'objs'=>$objs,
@@ -69,8 +69,8 @@ class FrontController extends Controller
 		$news = DB::table('blogs')->orderBy('id','desc')->get();
 		
         return view('page.allnews',[
-		 	'meta_title'=>'ทีเด็ดคลับดอทคอม ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก',
-		 	'meta_description'=>'ทีเด็ดคลับดอทคอม ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก เที่ยงตรง กระชับ ฉับไว',
+		 	'meta_title'=>'เซียน7เอ็มดอทคอม ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก',
+		 	'meta_description'=>'เซียน7เอ็มดอทคอม ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก เที่ยงตรง กระชับ ฉับไว',
 		 	'allnews'=>$news
 		]);
 	}
@@ -78,8 +78,8 @@ class FrontController extends Controller
     public function allvicrow() {
         $analyzes = DB::table('analyzes')->orderBy('id','desc')->get();
         return view('page.allvicrow',[
-			'meta_title'=>'ทีเด็ดคลับดอทคอม วิเคราะห์บอลเด็ด จากลีกดังต่างๆ ทั่วโลก',
-			'meta_description'=>'วิเคราะห์ทีมบอล แบบเที่ยงตรง ข้อมูลแน่นๆ ฟันธงแบบเป๊ะๆ โดยกูรูขั้นเทพในวงการ',
+			'meta_title'=>'เซียน7เอ็มดอทคอม วิเคราะห์บอลเด็ด จากลีกดังต่างๆ ทั่วโลก',
+			'meta_description'=>'เซียน7เอ็มดอทคอม วิเคราะห์ทีมบอล แบบเที่ยงตรง ข้อมูลแน่นๆ ฟันธงแบบเป๊ะๆ โดยกูรูขั้นเทพในวงการ',
 			'analyzes'=>$analyzes
 		]);
 	}
@@ -131,8 +131,8 @@ class FrontController extends Controller
 		$objs = json_decode($json);
 		$youtube = DB::table('youtubes')->orderBy('id','desc')->take(2)->get();
 		return view('page.tdstep',[
-			'meta_title'=>'ทีเด็ดคลับดอทคอม ราคาบอลสเต็ปเดี่ยว',
-			'meta_description'=>'ทีเด็ดคลับดอทคอม ราคาบอลสเต็ปเดี่ยว ประจำวันนี้',
+			'meta_title'=>'เซียน7เอ็มดอทคอม ราคาบอลสเต็ปเดี่ยว',
+			'meta_description'=>'เซียน7เอ็มดอทคอม ราคาบอลสเต็ปเดี่ยว ประจำวันนี้',
 			'objs'=>$objs,
 			'youtube'=>$youtube
 		]);
@@ -143,8 +143,8 @@ class FrontController extends Controller
 		$objs = json_decode($json);
     	$youtube = DB::table('youtubes')->orderBy('id','desc')->take(2)->get();
 		return view('page.tdstep2',[
-	 		'meta_title'=>'ทีเด็ดคลับดอทคอม ราคาบอลสเต็ป',
-	 		'meta_description'=>'ทีเด็ดคลับดอทคอม ราคาบอลสเต็ป ประจำวันนี้',
+	 		'meta_title'=>'เซียน7เอ็มดอทคอม ราคาบอลสเต็ป',
+	 		'meta_description'=>'เซียน7เอ็มดอทคอม ราคาบอลสเต็ป ประจำวันนี้',
 			'objs'=>$objs,
 			'youtube'=>$youtube
 		]);
@@ -153,8 +153,8 @@ class FrontController extends Controller
     public function liveball() {
 		//$embed = ball_table();
         return view('page.live',[
-			'meta_title'=>'ทีเด็ดคลับดอทคอม ดูบอลบสด ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก',
-			'meta_description'=>'ทีเด็ดคลับดอทคอม ดูบอลบสด ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก เที่ยงตรง กระชับ ฉับไว',
+			'meta_title'=>'เซียน7เอ็มดอทคอม ดูบอลบสด ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก',
+			'meta_description'=>'เซียน7เอ็มดอทคอม ดูบอลบสด ศูนย์รวมข่าวสารวงการบอล จากลีกดังทั่วโลก เที่ยงตรง กระชับ ฉับไว',
 		]);			
 	}	
 }
