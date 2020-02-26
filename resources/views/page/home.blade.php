@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-8"><h3>ดูบอลออนไลน์</h3></div>
                         <div class="col-4">
-                            <a href="#"><p>ดูทั้งหมด</p></a>
+                            <a href="{{ url('/live') }}"><p>ดูทั้งหมด</p></a>
                         </div>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                                     @else <div class="carousel-item"> @endif
                                     <div class="slid-news">
                                         <a href="{{url('news/'.$new->id)}}">
-                                            <img src="{{serv_url('/imgs/'.$new->image)}}" class="d-block w-100" alt="...">
+                                            <img src="{{ serv_url('/imgs/'.$new->image )}}" class="d-block w-100" alt="...">
                                             <div class="content">
                                                 <p>{{$new->title}}</p>
                                             </div>

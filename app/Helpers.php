@@ -7,10 +7,11 @@ function getIP() {
    return $ip_address;
 }
 function serv_url($data='') {
+   $mainServ='http://api-88sport.com';
    if ($data != '') {
-      return env('SERV_URL').str_replace('//','/','/'.$data);
+      return $mainServ.str_replace('//','/','/'.$data);
    }
-   else return env('SERV_URL').'/';
+   else return $mainServ.'/';
 }
 
 function visit($id, $act='',$db='news') { 
@@ -126,9 +127,9 @@ function ball_table() {
       echo "<th>วันที่</th>";
       echo "<th>เวลา</th>";
       echo "<th>ลีก</th>";
-      echo "<th class='mobileNone'>ทีมเหย้า</th>";
-      echo "<th class='mobileNone'></th>";
-      echo "<th class='mobileNone'>ทีมเยือน</th>";
+      echo "<th class='mobileNone d-none'>ทีมเหย้า</th>";
+      echo "<th class='mobileNone d-none'></th>";
+      echo "<th class='mobileNone d-none'>ทีมเยือน</th>";
       echo "<th class='mobileNone' width='20%'>ช่องอื่นๆ</th>";
       echo "<th>ดูบอล</th>";
       echo "</tr>";
@@ -150,18 +151,18 @@ function ball_table() {
          echo '<td class="mobileOpen" style="text-align: right;"><a href="#" style="color: yellow;" onclick="return changeChannel(\'';
          echo $programs->channel[0]->code;
          echo '\');">' . $programs->hometeam . ' <img src="'. $programs->ht_logo . '"  style="height: 20px!important; width: auto; vertical-align: middle;  display: inline-block;">' . '</a></td>';
-         echo "<td class='mobileOpen text-center' style='max-width:20px!important;'>vs</td>";
+         echo "<td class='mobileOpen text-center' style='max-width:10px!important;'>vs</td>";
          echo '<td class="mobileOpen"><a href="#" style="color: red;" onclick="return changeChannel(\'';
          echo $programs->channel[0]->code;
          echo '\');"><img src="'. $programs->at_logo . '" style="height: 20px!important; width: auto; vertical-align: middle; display: inline-block;"> ' . $programs->awayteam . '</a></td>';
          echo "<td class='date' width='120px;'>" . date_format($date,"d-m-Y") . "</td>";
          echo "<td class='time'>" . substr($programs->datetime,11,5) . "</td>";
          echo "<td>$programs->league</td>";
-         echo '<td class="mobileNone" style="text-align: right;"><a href="#" style="color: yellow;" onclick="return changeChannel(\'';
+         echo '<td class="mobileNone d-none" style="text-align: right;"><a href="#" style="color: yellow;" onclick="return changeChannel(\'';
          echo $programs->channel[0]->code;
          echo '\');">' . $programs->hometeam . ' <img src="'. $programs->ht_logo . '"  style="height: 20px!important; width: auto; vertical-align: middle; display: inline-block;">' . '</a></td>';
-         echo '<td class="text-center mobileNone" style="max-width:20px!important;">vs</td>';
-         echo '<td class="mobileNone"><a href="#" style="color: red;" onclick="return changeChannel(\'';
+         echo '<td class="text-center mobileNone d-none" style="max-width:20px!important;">vs</td>';
+         echo '<td class="mobileNone d-none"><a href="#" style="color: red;" onclick="return changeChannel(\'';
          echo $programs->channel[0]->code;
          echo '\');"><img src="'. $programs->at_logo . '" style="height: 20px!important; width: auto; vertical-align: middle; display: inline-block;"> ' . $programs->awayteam . '</a></td>';
          echo "<td class='channel mobileNone'>";

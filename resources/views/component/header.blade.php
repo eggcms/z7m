@@ -6,7 +6,7 @@
                     <button class="navbar-toggler bg-edge" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand m-0 p-0 logo" href="#">
+                    <a class="navbar-brand m-0 p-0 logo" href="{{ url('/') }}">
                         <img src="/images/zean7m-logo.png" alt="">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
